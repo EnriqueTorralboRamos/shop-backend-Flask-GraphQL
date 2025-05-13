@@ -1,0 +1,17 @@
+type Product {
+  id: Int!
+  nombre: String!
+  precio: Float!
+  stock: Int!
+  disponible: Boolean!
+  descripcion: String
+  imagen: String
+}
+
+type Query {
+  productos: [Product!]!
+}
+
+type Mutation {
+  actualizarStock(id: Int!, cantidad: Int!): Product
+}
