@@ -1,17 +1,18 @@
 type Product {
-  id: Int!
-  nombre: String!
-  precio: Float!
+  id: String!
+  name: String!
+  price: Float!
   stock: Int!
-  disponible: Boolean!
-  descripcion: String
-  imagen: String
+  available: Boolean!
+  descripction: String
+  image: String
 }
 
 type Query {
   productos: [Product!]!
+  producto(id: String!): Product
 }
 
 type Mutation {
-  actualizarStock(id: Int!, cantidad: Int!): Product
+  actualizarStock(id: String!, cantidad: Int!): Product
 }

@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 from ariadne import graphql_sync, load_schema_from_path, make_executable_schema
 from ariadne.explorer import ExplorerGraphiQL
 from resolvers import resolvers
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 type_defs = load_schema_from_path("schema.graphql")
 schema = make_executable_schema(type_defs, *resolvers)

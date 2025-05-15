@@ -9,7 +9,7 @@ __pycache__/
 *.log
 
 # Config de IDE
-.vscode/
+.vscode/cd
 .idea/
 
 # Archivos del sistema
